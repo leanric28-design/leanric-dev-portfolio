@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Business Platform — Leanric Dasigan"
+  >
+
+  <title>Business Platform | Leanric Dasigan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #07070b;
+      color: #f5f7fa;
+      font-family: "Inter", sans-serif;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+
+      background-image:
+        linear-gradient(
+          rgba(0, 229, 255, 0.035) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(0, 229, 255, 0.035) 1px,
+          transparent 1px
+        );
+
+      background-size: 50px 50px;
+      mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+      );
+
+      z-index: -2;
+    }
+
+    .glow {
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: rgba(0, 229, 255, 0.08);
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .glow-one {
+      top: -200px;
+      right: -150px;
+    }
+
+    .glow-two {
+      bottom: -250px;
+      left: -200px;
+    }
+
+    /* NAV */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+
+      background: rgba(7,7,11,0.75);
+
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-container {
+      width: min(1180px, 92%);
+      margin: auto;
+
+      height: 75px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: white;
+      text-decoration: none;
+
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .logo-bracket {
+      color: #00e5ff;
+    }
+
+    .back-link {
+      color: #9ba3af;
+      text-decoration: none;
+
+      font-size: 13px;
+      font-weight: 600;
+
+      transition: 0.3s;
+    }
+
+    .back-link:hover {
+      color: #00e5ff;
+    }
+
+    /* HERO */
+
+    .hero {
+      width: min(1180px, 92%);
+      margin: auto;
+
+      min-height: 80vh;
+
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .eyebrow {
+      color: #00e5ff;
+
+      font-size: 11px;
+      font-weight: 800;
+
+      letter-spacing: 3px;
+
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: "Space Grotesk", sans-serif;
+
+      font-size: clamp(45px, 7vw, 82px);
+
+      line-height: 0.95;
+
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: #00e5ff;
+    }
+
+    .hero-description {
+      max-width: 600px;
+
+      color: #9ba3af;
+
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+
+      margin-top: 35px;
+
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 14px 20px;
+
+      border-radius: 9px;
+
+      text-decoration: none;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #00e5ff;
+      color: #050507;
+
+      box-shadow:
+        0 0 30px rgba(0,229,255,0.15);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 0 40px rgba(0,229,255,0.3);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.15);
+
+      color: white;
+
+      background: rgba(255,255,255,0.03);
+    }
+
+    .btn-secondary:hover {
+      border-color: #00e5ff;
+      color: #00e5ff;
+    }
+
+    /* TERMINAL */
+
+    .terminal {
+      border: 1px solid rgba(0,229,255,0.2);
+
+      border-radius: 18px;
+
+      overflow: hidden;
+
+      background: rgba(10,10,15,0.8);
+
+      box-shadow:
+        0 30px 80px rgba(0,0,0,0.4),
+        0 0 50px rgba(0,229,255,0.05);
+    }
+
+    .terminal-header {
+      height: 45px;
+
+      display: flex;
+      align-items: center;
+
+      padding: 0 16px;
+
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dots span {
+      width: 9px;
+      height: 9px;
+
+      border-radius: 50%;
+
+      background: rgba(255,255,255,0.25);
+    }
+
+    .terminal-title {
+      margin-left: auto;
+
+      font-size: 10px;
+
+      color: #777f8c;
+
+      letter-spacing: 1px;
+    }
+
+    .terminal-body {
+      padding: 30px;
+
+      font-family: monospace;
+
+      color: #b7c1cc;
+
+      line-height: 2;
+    }
+
+    .cyan {
+      color: #00e5ff;
+    }
+
+    .green {
+      color: #73f59c;
+    }
+
+    .purple {
+      color: #bd8cff;
+    }
+
+    /* FEATURES */
+
+    .features {
+      width: min(1180px, 92%);
+      margin: 0 auto 100px;
+    }
+
+    .section-label {
+      color: #00e5ff;
+
+      font-size: 10px;
+      font-weight: 800;
+
+      letter-spacing: 3px;
+
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: "Space Grotesk", sans-serif;
+
+      font-size: 38px;
+
+      margin-bottom: 40px;
+    }
+
+    .feature-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .feature {
+      padding: 28px;
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      border-radius: 15px;
+
+      background: rgba(255,255,255,0.025);
+
+      transition: 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-6px);
+
+      border-color: rgba(0,229,255,0.3);
+    }
+
+    .feature-icon {
+      font-size: 25px;
+
+      color: #00e5ff;
+
+      margin-bottom: 18px;
+    }
+
+    .feature h3 {
+      font-family: "Space Grotesk", sans-serif;
+
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: #8d96a3;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+    }
+
+    /* CTA */
+
+    .cta {
+      width: min(900px, 92%);
+      margin: 0 auto 100px;
+
+      padding: 55px 30px;
+
+      text-align: center;
+
+      border: 1px solid rgba(0,229,255,0.18);
+
+      border-radius: 22px;
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(0,229,255,0.08),
+          transparent 65%
+        );
+    }
+
+    .cta h2 {
+      font-family: "Space Grotesk", sans-serif;
+
+      font-size: 38px;
+
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #8d96a3;
+
+      margin-bottom: 25px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 30px;
+
+      text-align: center;
+
+      border-top: 1px solid rgba(255,255,255,0.08);
+
+      color: #6f7782;
+
+      font-size: 12px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .hero {
+        grid-template-columns: 1fr;
+
+        padding: 80px 0;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .terminal {
+        margin-top: 10px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <!-- NAVIGATION -->
+
+  <header class="navbar">
+
+    <div class="nav-container">
+
+      <a href="index.html" class="logo">
+        <span class="logo-bracket">&lt;</span>
+        LD
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <a href="index.html#projects" class="back-link">
+        ← Back to Portfolio
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero">
+
+      <div>
+
+        <p class="eyebrow">
+          DIGITAL BUSINESS PLATFORM
+        </p>
+
+        <h1>
+          Build Your
+          <span>Next Move.</span>
+        </h1>
+
+        <p class="hero-description">
+          A futuristic digital platform concept designed to help
+          entrepreneurs discover products, explore opportunities,
+          organize ideas and transform business concepts into
+          practical digital solutions.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#features"
+            class="btn btn-primary"
+          >
+            Explore Platform ↓
+          </a>
+
+          <a
+            href="index.html#contact"
+            class="btn btn-secondary"
+          >
+            Work With Me
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- CODE TERMINAL -->
+
+      <div class="terminal">
+
+        <div class="terminal-header">
+
+          <div class="dots">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+          </div>
+
+          <span class="terminal-title">
+            business-platform.js
+          </span>
+
+        </div>
+
+        <div class="terminal-body">
+
+          <p>
+            <span class="purple">const</span>
+            platform =
+            <span class="green">
+              "BusinessOS"
+            </span>;
+          </p>
+
+          <p>
+            <span class="purple">const</span>
+            market =
+            <span class="green">
+              "Philippines"
+            </span>;
+          </p>
+
+          <br>
+
+          <p>
+            <span class="purple">function</span>
+            <span class="cyan">
+              buildBusiness
+            </span>() {
+          </p>
+
+          <p>
+            &nbsp;&nbsp;return {
+          </p>
+
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            discover:
+            <span class="green">
+              true
+            </span>,
+          </p>
+
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            connect:
+            <span class="green">
+              true
+            </span>,
+          </p>
+
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            grow:
+            <span class="green">
+              true
+            </span>
+          </p>
+
+          <p>
+            &nbsp;&nbsp;};
+          </p>
+
+          <p>}</p>
+
+          <br>
+
+          <p>
+            <span class="cyan">➜</span>
+            system_ready_
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section
+      class="features"
+      id="features"
+    >
+
+      <p class="section-label">
+        PLATFORM CONCEPT
+      </p>
+
+      <h2 class="section-title">
+        Designed for
+        <span style="color:#00e5ff;">
+          Business Builders
+        </span>
+      </h2>
+
+
+      <div class="feature-grid">
+
+
+        <article class="feature">
+
+          <div class="feature-icon">
+            ◈
+          </div>
+
+          <h3>
+            Discover
+          </h3>
+
+          <p>
+            Explore products, services and business
+            opportunities from a single digital platform.
+          </p>
+
+        </article>
+
+
+        <article class="feature">
+
+          <div class="feature-icon">
+            ⌘
+          </div>
+
+          <h3>
+            Connect
+          </h3>
+
+          <p>
+            Connect entrepreneurs, suppliers and
+            digital service providers through a modern
+            online experience.
+          </p>
+
+        </article>
+
+
+        <article class="feature">
+
+          <div class="feature-icon">
+            ↗
+          </div>
+
+          <h3>
+            Grow
+          </h3>
+
+          <p>
+            Turn business ideas into practical projects,
+            digital workflows and scalable opportunities.
+          </p>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+      <p class="section-label">
+        HAVE AN IDEA?
+      </p>
+
+      <h2>
+        Let's build it.
+      </h2>
+
+      <p>
+        Need a website, digital platform or business solution?
+      </p>
+
+      <a
+        href="index.html#contact"
+        class="btn btn-primary"
+      >
+        Start a Project ↗
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    © 2026 Leanric Dasigan —
+    Business Platform Concept
+
+  </footer>
+
+
+</body>
+
+</html>

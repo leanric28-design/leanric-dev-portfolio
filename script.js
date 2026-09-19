@@ -74,29 +74,35 @@ const sections = document.querySelectorAll("section[id]");
 const navigationLinks = document.querySelectorAll(".nav-links a");
 
 const sectionObserver = new IntersectionObserver(
-(entries) => {
-entries.forEach((entry) => {
-if (entry.isIntersecting) {
-navigationLinks.forEach((link) => {
-link.classList.remove("active-link");
+  (entries) => {
+    entries.forEach((entry) => {
 
-```
-      if (link.getAttribute("href") === `#${entry.target.id}`) {
-        link.classList.add("active-link");
+      if (entry.isIntersecting) {
+
+        navigationLinks.forEach((link) => {
+
+          link.classList.remove("active-link");
+
+          if (
+            link.getAttribute("href") ===
+            `#${entry.target.id}`
+          ) {
+            link.classList.add("active-link");
+          }
+
+        });
+
       }
-    });
-  }
-});
-```
 
-},
-{
-rootMargin: "-35% 0px -55% 0px"
-}
+    });
+  },
+  {
+    rootMargin: "-35% 0px -55% 0px"
+  }
 );
 
 sections.forEach((section) => {
-sectionObserver.observe(section);
+  sectionObserver.observe(section);
 });
 
 // Dynamic year
@@ -164,25 +170,42 @@ typeRole();
 // Small mouse movement effect for hero code window
 const codeWindow = document.querySelector(".code-window");
 
-if (codeWindow && window.matchMedia("(min-width: 900px)").matches) {
-document.addEventListener("mousemove", (event) => {
-const x = (window.innerWidth / 2 - event.clientX) / 90;
-const y = (window.innerHeight / 2 - event.clientY) / 90;
+if (
+  codeWindow &&
+  window.matchMedia("(min-width: 900px)").matches
+) {
 
-```
-codeWindow.style.transform =
-  `perspective(1000px) rotateY(${x - 4}deg) rotateX(${y + 2}deg)`;
-```
+  document.addEventListener("mousemove", (event) => {
 
-});
+    const x =
+      (window.innerWidth / 2 - event.clientX) / 90;
+
+    const y =
+      (window.innerHeight / 2 - event.clientY) / 90;
+
+    codeWindow.style.transform =
+      `perspective(1000px) rotateY(${x - 4}deg) rotateX(${y + 2}deg)`;
+
+  });
+
 }
 
-// Prevent empty project links from jumping to the top
-document.querySelectorAll('.project-link[href="#"]').forEach((link) => {
-link.addEventListener("click", (event) => {
-event.preventDefault();
-alert("Project demo coming soon.");
-});
-});
 
-console.log("Leanric Dev Portfolio V4 loaded successfully.");
+// Prevent empty project links from jumping to the top
+document
+  .querySelectorAll('.project-link[href="#"]')
+  .forEach((link) => {
+
+    link.addEventListener("click", (event) => {
+
+      event.preventDefault();
+
+      alert("Project demo coming soon.");
+
+    });
+
+  });
+
+
+// Portfolio loaded
+console.log("Leanric Dev Portfolio V5 loaded successfully.");

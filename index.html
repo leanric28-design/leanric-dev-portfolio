@@ -1,1096 +1,692 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+  <meta name="description" content="Leanric Dasigan — Junior Web Developer, Full-Stack Developer and Creative Digital Specialist.">
+  <meta name="author" content="Leanric Dasigan">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+  <meta property="og:title" content="Leanric Dasigan — Developer Portfolio">
+  <meta property="og:description" content="Junior Web Developer & Creative Digital Specialist.">
+  <meta property="og:type" content="website">
 
-    <title>LEANRIC.DEV — Full-Stack Developer</title>
+  <title>Leanric Dasigan | Web Developer</title>
 
-    <meta
-        name="description"
-        content="Leanric Dasigan — Digital Architect & Full-Stack Developer building modern websites, digital products and intelligent systems."
-    >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <meta
-        name="theme-color"
-        content="#050713"
-    >
-
-    <link rel="stylesheet" href="style.css">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
-        rel="stylesheet"
-    >
-
+  <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-<div class="cursor-glow"></div>
+  <!-- Background -->
 
-<div class="background-grid"></div>
+  <div class="background-grid"></div>
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
 
+  <!-- Navigation -->
 
-<!-- ================= NAVIGATION ================= -->
+  <header class="navbar">
+    <div class="nav-container">
 
-<header class="navbar">
+```
+  <a href="#home" class="logo">
+    <span class="logo-bracket">&lt;</span>
+    LD
+    <span class="logo-bracket">/&gt;</span>
+  </a>
 
-    <a
-        href="#home"
-        class="logo"
-    >
-        LEANRIC<span>.DEV</span>
-    </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
+  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+    ☰
+  </button>
 
-    <nav>
+</div>
+```
 
-        <a
-            href="#home"
-            class="active"
-        >
-            HOME
-        </a>
+  </header>
 
-        <a href="#about">
-            ABOUT
-        </a>
+  <!-- Hero -->
 
-        <a href="#skills">
-            SKILLS
-        </a>
+  <main>
 
-        <a href="#projects">
-            PROJECTS
-        </a>
+```
+<section class="hero section" id="home">
 
-        <a href="#services">
-            SERVICES
-        </a>
+  <div class="hero-content">
 
-        <a href="#contact">
-            CONTACT
-        </a>
-
-    </nav>
-
-
-    <a
-        href="#contact"
-        class="nav-button"
-    >
-        LET'S TALK
-    </a>
-
-</header>
-
-
-<!-- ================= HERO ================= -->
-
-<main>
-
-<section
-    id="home"
-    class="hero"
->
-
-    <div class="hero-left">
-
-        <div class="status-pill">
-
-            <span class="status-dot"></span>
-
-            AVAILABLE FOR PROJECTS
-
-        </div>
-
-
-        <p class="eyebrow">
-
-            DIGITAL ARCHITECT & FULL-STACK DEVELOPER
-
-        </p>
-
-
-        <h1>
-
-            Building
-
-            <br>
-
-            <span>digital</span>
-
-            <br>
-
-            <strong>experiences.</strong>
-
-        </h1>
-
-
-        <p class="hero-description">
-
-            I design and develop modern digital products,
-            websites and intelligent systems focused on
-            performance, usability and real-world business results.
-
-        </p>
-
-
-        <div class="hero-buttons">
-
-            <a
-                href="#projects"
-                class="primary-button"
-            >
-                VIEW PROJECTS →
-            </a>
-
-
-            <a
-                href="#contact"
-                class="secondary-button"
-            >
-                HIRE ME
-            </a>
-
-        </div>
-
-
-        <div class="hero-stats">
-
-            <div>
-
-                <strong>10+</strong>
-
-                <span>
-                    PROJECTS
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>∞</strong>
-
-                <span>
-                    IDEAS
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>24/7</strong>
-
-                <span>
-                    LEARNING
-                </span>
-
-            </div>
-
-        </div>
-
+    <div class="status-badge">
+      <span class="status-dot"></span>
+      Available for freelance projects
     </div>
 
-
-    <!-- CODE INTERFACE -->
-
-    <div class="hero-right">
-
-        <div class="code-window">
-
-            <div class="window-header">
-
-                <div class="window-dots">
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                </div>
-
-
-                <div class="window-title">
-
-                    leanric.dev
-
-                </div>
-
-
-                <div class="window-status">
-
-                    ● ONLINE
-
-                </div>
-
-            </div>
-
-
-            <div class="code-content">
-
-<pre><code>
-<span class="purple">const</span> developer = {
-
-  name:
-    <span class="green">"Leanric Dasigan"</span>,
-
-  role:
-    <span class="green">"Full-Stack Developer"</span>,
-
-  location:
-    <span class="green">"Philippines"</span>,
-
-  stack: [
-
-    <span class="green">"HTML"</span>,
-    <span class="green">"CSS"</span>,
-    <span class="green">"JavaScript"</span>,
-    <span class="green">"React"</span>,
-    <span class="green">"Node.js"</span>
-
-  ],
-
-  mission:
-    <span class="green">
-    "Build. Learn. Scale."
-    </span>
-
-};
-
-<span class="purple">
-developer
-</span>.initialize();
-
-<span class="comment">
-// SYSTEM READY
-</span>
-</code></pre>
-
-            </div>
-
-
-            <div class="terminal-line">
-
-                <span>
-                    root@leanric
-                </span>
-
-                <span>
-                    ~
-                </span>
-
-                <span class="terminal-command">
-                    ./build_future.sh
-                </span>
-
-                <span class="cursor">
-                    █
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="floating-card">
-
-            <div class="floating-icon">
-                ⚡
-            </div>
-
-            <div>
-
-                <small>
-                    SYSTEM
-                </small>
-
-                <strong>
-                    ONLINE
-                </strong>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section
-    id="about"
-    class="section"
->
-
-    <div class="section-label">
-        01 / ABOUT
-    </div>
-
-
-    <div class="section-heading">
-
-        <h2>
-
-            Turning ideas
-
-            <span>
-                into systems.
-            </span>
-
-        </h2>
-
-
-        <p>
-
-            I combine development, design and automation
-            to create digital solutions that are built to
-            solve actual problems.
-
-        </p>
-
-    </div>
-
-
-    <div class="about-grid">
-
-        <div class="about-card large">
-
-            <div class="card-number">
-                01
-            </div>
-
-            <h3>
-                DEVELOPMENT
-            </h3>
-
-            <p>
-
-                Building responsive websites, web applications
-                and digital platforms using modern technologies.
-
-            </p>
-
-        </div>
-
-
-        <div class="about-card">
-
-            <div class="card-number">
-                02
-            </div>
-
-            <h3>
-                DIGITAL SYSTEMS
-            </h3>
-
-            <p>
-
-                Creating systems that connect websites,
-                users, workflows and business processes.
-
-            </p>
-
-        </div>
-
-
-        <div class="about-card">
-
-            <div class="card-number">
-                03
-            </div>
-
-            <h3>
-                AUTOMATION
-            </h3>
-
-            <p>
-
-                Exploring AI-powered workflows and automation
-                to make digital operations faster and smarter.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= SKILLS ================= -->
-
-<section
-    id="skills"
-    class="section"
->
-
-    <div class="section-label">
-        02 / TECH STACK
-    </div>
-
-
-    <div class="section-heading">
-
-        <h2>
-
-            Tools of the
-
-            <span>
-                craft.
-            </span>
-
-        </h2>
-
-
-        <p>
-
-            Technologies and tools I use to build modern
-            digital experiences.
-
-        </p>
-
-    </div>
-
-
-    <div class="skills-grid">
-
-        <div class="skill-card">
-
-            <span>01</span>
-
-            <h3>
-                HTML5
-            </h3>
-
-            <p>
-                Semantic Structure
-            </p>
-
-        </div>
-
-
-        <div class="skill-card">
-
-            <span>02</span>
-
-            <h3>
-                CSS3
-            </h3>
-
-            <p>
-                Modern UI / UX
-            </p>
-
-        </div>
-
-
-        <div class="skill-card">
-
-            <span>03</span>
-
-            <h3>
-                JavaScript
-            </h3>
-
-            <p>
-                Interactive Systems
-            </p>
-
-        </div>
-
-
-        <div class="skill-card">
-
-            <span>04</span>
-
-            <h3>
-                React
-            </h3>
-
-            <p>
-                Component Architecture
-            </p>
-
-        </div>
-
-
-        <div class="skill-card">
-
-            <span>05</span>
-
-            <h3>
-                Node.js
-            </h3>
-
-            <p>
-                Backend Development
-            </p>
-
-        </div>
-
-
-        <div class="skill-card">
-
-            <span>06</span>
-
-            <h3>
-                Git
-            </h3>
-
-            <p>
-                Version Control
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= PROJECTS ================= -->
-
-<section
-    id="projects"
-    class="section projects-section"
->
-
-    <div class="section-label">
-        03 / SELECTED PROJECTS
-    </div>
-
-
-    <div class="section-heading">
-
-        <h2>
-
-            Things I've
-
-            <span>
-                built.
-            </span>
-
-        </h2>
-
-
-        <p>
-
-            Digital products, experiments and
-            business-focused systems.
-
-        </p>
-
-    </div>
-
-
-    <div class="projects-grid">
-
-
-        <!-- PROJECT 01 -->
-
-        <article class="project-card featured">
-
-            <div class="project-top">
-
-                <span>
-                    01
-                </span>
-
-                <span>
-                    WEB PLATFORM
-                </span>
-
-            </div>
-
-
-            <div class="project-visual">
-
-                <div class="visual-glow"></div>
-
-                <div class="fake-browser">
-
-                    <div></div>
-                    <div></div>
-                    <div></div>
-
-                </div>
-
-            </div>
-
-
-            <div class="project-info">
-
-                <h3>
-                    Business Platform
-                </h3>
-
-                <p>
-
-                    A digital platform concept designed
-                    for businesses, entrepreneurs and
-                    digital workflows.
-
-                </p>
-
-
-                <div class="tags">
-
-                    <span>
-                        HTML
-                    </span>
-
-                    <span>
-                        CSS
-                    </span>
-
-                    <span>
-                        JAVASCRIPT
-                    </span>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- PROJECT 02 -->
-
-        <article class="project-card">
-
-            <div class="project-top">
-
-                <span>
-                    02
-                </span>
-
-                <span>
-                    E-COMMERCE
-                </span>
-
-            </div>
-
-
-            <div class="project-visual ecommerce">
-
-                <div class="product-box">
-                    PACK
-                </div>
-
-            </div>
-
-
-            <div class="project-info">
-
-                <h3>
-                    Packaging E-Commerce
-                </h3>
-
-                <p>
-
-                    Digital storefront concept for
-                    packaging products, orders and
-                    business customers.
-
-                </p>
-
-
-                <div class="tags">
-
-                    <span>
-                        WEB
-                    </span>
-
-                    <span>
-                        UI
-                    </span>
-
-                    <span>
-                        BUSINESS
-                    </span>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- PROJECT 03 -->
-
-        <article class="project-card">
-
-            <div class="project-top">
-
-                <span>
-                    03
-                </span>
-
-                <span>
-                    NON-PROFIT
-                </span>
-
-            </div>
-
-
-            <div class="project-visual charity">
-
-                <div class="charity-core">
-
-                    <span>
-                        +
-                    </span>
-
-                    <small>
-                        EVERY CHILD
-                    </small>
-
-                </div>
-
-            </div>
-
-
-            <div class="project-info">
-
-                <h3>
-                    Charity Donation Platform
-                </h3>
-
-                <p>
-
-                    Donation website concept with
-                    campaign information and payment
-                    workflow.
-
-                </p>
-
-
-                <div class="tags">
-
-                    <span>
-                        HTML
-                    </span>
-
-                    <span>
-                        CSS
-                    </span>
-
-                    <span>
-                        JS
-                    </span>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- PROJECT 04 -->
-
-        <article class="project-card">
-
-            <div class="project-top">
-
-                <span>
-                    04
-                </span>
-
-                <span>
-                    AUTOMATION
-                </span>
-
-            </div>
-
-
-            <div class="project-visual ai">
-
-                <div class="ai-core">
-                    AI
-                </div>
-
-            </div>
-
-
-            <div class="project-info">
-
-                <h3>
-                    AI Automation System
-                </h3>
-
-                <p>
-
-                    Experimental intelligent workflow
-                    concept for automating repetitive
-                    business processes.
-
-                </p>
-
-
-                <div class="tags">
-
-                    <span>
-                        AI
-                    </span>
-
-                    <span>
-                        AUTOMATION
-                    </span>
-
-                    <span>
-                        API
-                    </span>
-
-                </div>
-
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- ================= SERVICES ================= -->
-
-<section
-    id="services"
-    class="section"
->
-
-    <div class="section-label">
-        04 / SERVICES
-    </div>
-
-
-    <div class="section-heading">
-
-        <h2>
-
-            What I can
-
-            <span>
-                build.
-            </span>
-
-        </h2>
-
-    </div>
-
-
-    <div class="services-grid">
-
-        <div class="service">
-
-            <span>
-                01
-            </span>
-
-            <h3>
-                Web Development
-            </h3>
-
-            <p>
-
-                Modern responsive websites and web applications
-                designed around your goals.
-
-            </p>
-
-        </div>
-
-
-        <div class="service">
-
-            <span>
-                02
-            </span>
-
-            <h3>
-                UI / UX
-            </h3>
-
-            <p>
-
-                Clean futuristic interfaces with strong
-                visual hierarchy and usability.
-
-            </p>
-
-        </div>
-
-
-        <div class="service">
-
-            <span>
-                03
-            </span>
-
-            <h3>
-                Business Systems
-            </h3>
-
-            <p>
-
-                Digital systems designed to organize,
-                automate and improve business workflows.
-
-            </p>
-
-        </div>
-
-
-        <div class="service">
-
-            <span>
-                04
-            </span>
-
-            <h3>
-                AI Automation
-            </h3>
-
-            <p>
-
-                Practical automation solutions using
-                modern AI tools and workflows.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section
-    id="contact"
-    class="contact-section"
->
-
-    <div class="contact-inner">
-
-        <div class="section-label">
-            05 / CONTACT
-        </div>
-
-
-        <h2>
-
-            Have an idea?
-
-            <br>
-
-            <span>
-                Let's build it.
-            </span>
-
-        </h2>
-
-
-        <p>
-
-            Tell me what you're working on and
-            let's turn your idea into something real.
-
-        </p>
-
-
-        <div class="contact-buttons">
-
-            <a
-                href="mailto:Dasiganleanric1@gmail.com"
-                class="primary-button"
-            >
-                START A PROJECT → 
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <div class="footer-logo">
-
-        LEANRIC<span>
-            .DEV
-        </span>
-
-    </div>
-
-
-    <p>
-
-        © 2026 LEANRIC.DEV
-        — BUILT WITH CODE & CURIOSITY.
-
+    <p class="eyebrow">HELLO, I'M</p>
+
+    <h1>
+      Leanric
+      <span>Dasigan</span>
+    </h1>
+
+    <h2>
+      Junior Web Developer
+      <span class="typing-cursor">|</span>
+    </h2>
+
+    <p class="hero-description">
+      I build modern, responsive and user-focused digital experiences
+      while combining web development, creative production and
+      practical business solutions.
     </p>
 
+    <div class="hero-buttons">
+      <a href="#projects" class="btn btn-primary">
+        View My Work
+        <span>↗</span>
+      </a>
 
-    <div class="footer-links">
+      <a href="#contact" class="btn btn-secondary">
+        Let's Work Together
+      </a>
+    </div>
 
-        <a
-            href="https://github.com/"
-            target="_blank"
-        >
-            GITHUB
-        </a>
+    <div class="hero-stats">
 
-        <a
-            href="https://www.linkedin.com/in/leanric-dasigan-09428428a/"
-            target="_blank"
-        >
-            LINKEDIN
-        </a>
+      <div class="stat">
+        <strong>WEB</strong>
+        <span>Development</span>
+      </div>
 
-        <a
-            href="https://www.facebook.com/profile.php?id=61579257759285
-        >
-            FACEBOOK
-        </a>
+      <div class="stat">
+        <strong>FULL</strong>
+        <span>Stack Learning</span>
+      </div>
+
+      <div class="stat">
+        <strong>CREATIVE</strong>
+        <span>Digital Media</span>
+      </div>
 
     </div>
 
-</footer>
+  </div>
 
+  <div class="hero-visual">
 
-<script src="script.js"></script>
+    <div class="code-window">
+
+      <div class="window-bar">
+        <div class="window-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <span class="window-title">leanric.dev</span>
+      </div>
+
+      <div class="code-content">
+
+        <p>
+          <span class="code-purple">const</span>
+          developer =
+          <span class="code-green">"Leanric"</span>;
+        </p>
+
+        <p>
+          <span class="code-purple">const</span>
+          role =
+          <span class="code-green">"Web Developer"</span>;
+        </p>
+
+        <br>
+
+        <p>
+          <span class="code-purple">function</span>
+          <span class="code-blue">buildFuture</span>() {
+        </p>
+
+        <p class="indent">
+          <span class="code-purple">return</span> {
+        </p>
+
+        <p class="indent-double">
+          passion:
+          <span class="code-green">true</span>,
+        </p>
+
+        <p class="indent-double">
+          creativity:
+          <span class="code-green">true</span>,
+        </p>
+
+        <p class="indent-double">
+          learning:
+          <span class="code-green">"always"</span>
+        </p>
+
+        <p class="indent">};</p>
+
+        <p>}</p>
+
+        <p class="terminal-line">
+          <span>➜</span> building_next_project<span class="blink">_</span>
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="floating-card card-one">
+      <span class="card-icon">⚡</span>
+      <div>
+        <strong>Clean Code</strong>
+        <small>Modern Development</small>
+      </div>
+    </div>
+
+    <div class="floating-card card-two">
+      <span class="card-icon">◈</span>
+      <div>
+        <strong>Creative</strong>
+        <small>Digital Solutions</small>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- About -->
+<section class="section about-section" id="about">
+
+  <div class="section-heading">
+    <span class="section-number">01</span>
+    <div>
+      <p class="section-label">GET TO KNOW ME</p>
+      <h2>About <span>Me</span></h2>
+    </div>
+  </div>
+
+  <div class="about-grid">
+
+  <div class="about-photo">
+    <div class="photo-frame">
+      <img src="images/leanric-profile.jpg" alt="Leanric Dasigan - Web Developer">
+      <div class="photo-glow"></div>
+    </div>
+    <div class="photo-label">
+      <span>LD</span>
+      <small>WEB DEVELOPER</small>
+    </div>
+  </div>
+
+  <div class="about-text">
+
+      <p class="lead">
+        I'm <strong>Leanric Dasigan</strong>, a creative professional
+        transitioning into the world of web development.
+      </p>
+
+      <p>
+        I enjoy turning ideas into functional digital experiences.
+        My background in video editing, creative production and
+        technology gives me a different perspective when building
+        websites and digital products.
+      </p>
+
+      <p>
+        I'm continuously improving my skills in HTML, CSS, JavaScript
+        and full-stack development while building real-world projects
+        and practical solutions.
+      </p>
+
+      <div class="about-tags">
+        <span>Problem Solver</span>
+        <span>Self-Taught Developer</span>
+        <span>Creative Thinker</span>
+        <span>Continuous Learner</span>
+      </div>
+
+    </div>
+
+    <div class="about-terminal">
+
+      <div class="terminal-header">
+        <span>developer_profile.json</span>
+        <span>●</span>
+      </div>
+
+      <div class="terminal-body">
+
+        <p>{</p>
+
+        <p class="indent">
+          <span class="json-key">"name"</span>:
+          <span class="json-string">"Leanric Dasigan"</span>,
+        </p>
+
+        <p class="indent">
+          <span class="json-key">"role"</span>:
+          <span class="json-string">"Junior Web Developer"</span>,
+        </p>
+
+        <p class="indent">
+          <span class="json-key">"focus"</span>:
+          <span class="json-string">"Full-Stack Development"</span>,
+        </p>
+
+        <p class="indent">
+          <span class="json-key">"creative"</span>:
+          <span class="json-value">true</span>,
+        </p>
+
+        <p class="indent">
+          <span class="json-key">"learning"</span>:
+          <span class="json-string">"Every day"</span>
+        </p>
+
+        <p>}</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Skills -->
+<section class="section" id="skills">
+
+  <div class="section-heading">
+    <span class="section-number">02</span>
+    <div>
+      <p class="section-label">WHAT I WORK WITH</p>
+      <h2>My <span>Skills</span></h2>
+    </div>
+  </div>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <div class="skill-top">
+        <span class="skill-icon">&lt;/&gt;</span>
+        <span class="skill-level">CORE</span>
+      </div>
+      <h3>HTML</h3>
+      <p>Semantic and structured web pages.</p>
+      <div class="skill-line"><span style="width: 90%"></span></div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-top">
+        <span class="skill-icon">#</span>
+        <span class="skill-level">CORE</span>
+      </div>
+      <h3>CSS</h3>
+      <p>Responsive layouts and modern UI design.</p>
+      <div class="skill-line"><span style="width: 85%"></span></div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-top">
+        <span class="skill-icon">JS</span>
+        <span class="skill-level">LEARNING</span>
+      </div>
+      <h3>JavaScript</h3>
+      <p>Interactive interfaces and web functionality.</p>
+      <div class="skill-line"><span style="width: 70%"></span></div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-top">
+        <span class="skill-icon">UI</span>
+        <span class="skill-level">CREATIVE</span>
+      </div>
+      <h3>UI / UX</h3>
+      <p>Clean interfaces focused on user experience.</p>
+      <div class="skill-line"><span style="width: 80%"></span></div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-top">
+        <span class="skill-icon">VD</span>
+        <span class="skill-level">CREATIVE</span>
+      </div>
+      <h3>Video Editing</h3>
+      <p>Professional short-form and long-form editing.</p>
+      <div class="skill-line"><span style="width: 90%"></span></div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-top">
+        <span class="skill-icon">AI</span>
+        <span class="skill-level">GROWING</span>
+      </div>
+      <h3>AI & Automation</h3>
+      <p>Exploring AI-powered digital workflows.</p>
+      <div class="skill-line"><span style="width: 65%"></span></div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Projects -->
+<section class="section projects-section" id="projects">
+
+  <div class="section-heading">
+    <span class="section-number">03</span>
+    <div>
+      <p class="section-label">SELECTED WORK</p>
+      <h2>My <span>Projects</span></h2>
+    </div>
+  </div>
+
+  <div class="projects-grid">
+
+    <article class="project-card featured-project">
+
+      <div class="project-number">01</div>
+
+      <div class="project-content">
+
+        <div class="project-tag">WEB DEVELOPMENT</div>
+
+        <h3>Business Platform</h3>
+
+        <p>
+          A futuristic business platform concept designed to help
+          entrepreneurs explore products, services and digital
+          business opportunities.
+        </p>
+
+        <div class="project-tech">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+
+        <a href="#" class="project-link">
+          View Project <span>↗</span>
+        </a>
+
+      </div>
+
+    </article>
+
+    <article class="project-card">
+
+      <div class="project-number">02</div>
+
+      <div class="project-content">
+
+        <div class="project-tag">E-COMMERCE</div>
+
+        <h3>Packaging Solutions</h3>
+
+        <p>
+          A digital storefront concept for packaging products,
+          supplier connections, customer orders and online sales.
+        </p>
+
+        <div class="project-tech">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JS</span>
+        </div>
+
+        <a href="#" class="project-link">
+          View Project <span>↗</span>
+        </a>
+
+      </div>
+
+    </article>
+
+    <article class="project-card">
+
+      <div class="project-number">03</div>
+
+      <div class="project-content">
+
+        <div class="project-tag">CREATIVE</div>
+
+        <h3>Digital Media Portfolio</h3>
+
+        <p>
+          A creative portfolio concept combining video editing,
+          visual storytelling and digital production services.
+        </p>
+
+        <div class="project-tech">
+          <span>Creative</span>
+          <span>Video</span>
+          <span>Design</span>
+        </div>
+
+        <a href="#" class="project-link">
+          View Project <span>↗</span>
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+<!-- Services -->
+<section class="section" id="services">
+
+  <div class="section-heading">
+    <span class="section-number">04</span>
+    <div>
+      <p class="section-label">WHAT I CAN DO</p>
+      <h2>My <span>Services</span></h2>
+    </div>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <span class="service-number">01</span>
+      <span class="service-icon">⌘</span>
+      <h3>Web Development</h3>
+      <p>
+        Responsive websites and landing pages designed for modern
+        businesses and personal brands.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <span class="service-number">02</span>
+      <span class="service-icon">◫</span>
+      <h3>UI Implementation</h3>
+      <p>
+        Converting designs and ideas into clean, responsive
+        web interfaces.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <span class="service-number">03</span>
+      <span class="service-icon">▶</span>
+      <h3>Video Editing</h3>
+      <p>
+        Short-form content, social media videos, documentaries,
+        events and promotional content.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <span class="service-number">04</span>
+      <span class="service-icon">⚙</span>
+      <h3>Digital Solutions</h3>
+      <p>
+        Practical digital workflows combining websites, automation
+        and creative production.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Experience -->
+<section class="section experience-section">
+
+  <div class="section-heading">
+    <span class="section-number">05</span>
+    <div>
+      <p class="section-label">MY JOURNEY</p>
+      <h2>Experience & <span>Growth</span></h2>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-content">
+        <span class="timeline-date">CURRENT</span>
+        <h3>Freelance Web Developer</h3>
+        <p>
+          Building practical websites and digital projects while
+          continuously developing full-stack skills.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-content">
+        <span class="timeline-date">CREATIVE</span>
+        <h3>Video Editor & Digital Creator</h3>
+        <p>
+          Creating video content, promotional materials and
+          digital media for different projects.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-content">
+        <span class="timeline-date">FOUNDATION</span>
+        <h3>ICT & Technology</h3>
+        <p>
+          Started building a foundation in information technology,
+          computers and digital tools.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Contact -->
+<section class="section contact-section" id="contact">
+
+  <div class="contact-box">
+
+    <div class="contact-content">
+
+      <p class="section-label">HAVE A PROJECT?</p>
+
+      <h2>
+        Let's build something
+        <span>great.</span>
+      </h2>
+
+      <p>
+        Have an idea, website project or creative job?
+        Let's turn it into something real.
+      </p>
+
+      <a href="mailto:dasiganleanric1@gmail.com" class="btn btn-primary">
+        Start a Conversation
+        <span>↗</span>
+      </a>
+
+    </div>
+
+    <div class="contact-decoration">
+      <span>&lt;/&gt;</span>
+    </div>
+
+  </div>
+
+</section>
+```
+
+  </main>
+
+  <!-- Footer -->
+
+  <footer class="footer">
+
+```
+<div class="footer-container">
+
+  <div>
+    <a href="#home" class="logo">
+      <span class="logo-bracket">&lt;</span>
+      LD
+      <span class="logo-bracket">/&gt;</span>
+    </a>
+
+    <p>
+      Building digital experiences with code and creativity.
+    </p>
+  </div>
+
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+</div>
+
+<div class="footer-bottom">
+  <span>© 2026 Leanric Dasigan. All rights reserved.</span>
+  <span>Built with HTML • CSS • JavaScript</span>
+</div>
+```
+
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    ↑
+  </button>
+
+  <script src="script.js"></script>
 
 </body>
-
 </html>

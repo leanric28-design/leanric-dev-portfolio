@@ -1352,3 +1352,52 @@ transform: none;
   }
 
 }
+
+/* ========================================
+   V8 PROFESSIONAL BUTTONS
+   ======================================== */
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Contact links */
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 18px;
+
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  border-radius: 8px;
+
+  color: var(--accent);
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-2px);
+
+  border-color: var(--accent);
+
+  background: rgba(0, 229, 255, 0.07);
+}

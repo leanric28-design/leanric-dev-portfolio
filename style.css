@@ -1401,3 +1401,264 @@ transform: none;
 
   background: rgba(0, 229, 255, 0.07);
 }
+/* =========================================
+   HYBRID DEVELOPER SKILLS
+========================================= */
+
+.skills-section {
+  position: relative;
+  width: 100%;
+  padding: 110px 5.2vw 120px;
+  background:
+    radial-gradient(
+      circle at 90% 5%,
+      rgba(63, 255, 200, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(100, 80, 255, 0.07),
+      transparent 30%
+    );
+  overflow: hidden;
+}
+
+
+/* SECTION HEADER */
+
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  margin-bottom: 65px;
+}
+
+.section-number {
+  color: #55f5c5;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: monospace;
+  padding-top: 12px;
+}
+
+.section-label {
+  display: block;
+  color: #55f5c5;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(48px, 5vw, 78px);
+  line-height: 0.95;
+  letter-spacing: -4px;
+  font-weight: 500;
+  color: #f2f4fa;
+}
+
+.section-heading h2 span {
+  color: #55f5c5;
+}
+
+
+/* SKILLS GRID */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+
+/* CARD */
+
+.skill-card {
+  position: relative;
+  min-height: 220px;
+  padding: 30px 31px;
+  border: 1px solid rgba(150, 165, 190, 0.18);
+  border-radius: 25px;
+  background: rgba(10, 15, 25, 0.72);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* CARD HOVER */
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(85, 245, 197, 0.45);
+  background: rgba(13, 22, 32, 0.9);
+}
+
+
+/* TOP */
+
+.skill-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 42px;
+}
+
+.skill-icon {
+  color: #55f5c5;
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.skill-level {
+  color: #788397;
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+
+/* TEXT */
+
+.skill-card h3 {
+  margin: 0 0 10px;
+  color: #f1f4fb;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.skill-card p {
+  margin: 0;
+  max-width: 430px;
+  color: #8c96a9;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* PROGRESS */
+
+.skill-bar {
+  position: absolute;
+  left: 31px;
+  right: 31px;
+  bottom: 32px;
+  height: 3px;
+  background: rgba(150, 165, 190, 0.12);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-bar span {
+  display: block;
+  height: 100%;
+  background: #55f5c5;
+  border-radius: inherit;
+  box-shadow: 0 0 12px rgba(85, 245, 197, 0.35);
+}
+
+
+/* FEATURED AI CARD */
+
+.featured-skill {
+  border-color: rgba(85, 245, 197, 0.25);
+}
+
+.featured-skill::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 220px;
+  height: 220px;
+
+  background: radial-gradient(
+    circle,
+    rgba(85, 245, 197, 0.08),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+
+/* LEARNING */
+
+.learning-card {
+  border-color: rgba(85, 245, 197, 0.28);
+}
+
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .skills-section {
+    padding: 80px 20px 90px;
+  }
+
+  .section-heading {
+    gap: 15px;
+    margin-bottom: 45px;
+  }
+
+  .section-heading h2 {
+    font-size: 52px;
+    letter-spacing: -3px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .skill-card {
+    min-height: 210px;
+    padding: 25px;
+  }
+
+  .skill-top {
+    margin-bottom: 35px;
+  }
+
+  .skill-card h3 {
+    font-size: 20px;
+  }
+
+  .skill-card p {
+    font-size: 13px;
+  }
+
+  .skill-bar {
+    left: 25px;
+    right: 25px;
+    bottom: 27px;
+  }
+
+}

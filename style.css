@@ -1662,3 +1662,1764 @@ transform: none;
   }
 
 }
+/* =========================================================
+   LEANRIC DEV PORTFOLIO
+   PREMIUM MOTION SYSTEM
+========================================================= */
+
+
+/* =========================================================
+   MOTION VARIABLES
+========================================================= */
+
+:root {
+  --motion-green: #55f5c5;
+  --motion-green-soft: rgba(85, 245, 197, 0.15);
+  --motion-border: rgba(150, 165, 190, 0.18);
+  --motion-dark: #060910;
+}
+
+
+/* =========================================================
+   GLOBAL SMOOTH SCROLL
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   MOTION BACKGROUND
+========================================================= */
+
+.motion-background {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+
+/* GRID */
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 64px 64px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 90%
+  );
+
+  animation: gridMove 18s linear infinite;
+}
+
+
+@keyframes gridMove {
+
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(64px, 64px, 0);
+  }
+
+}
+
+
+/* =========================================================
+   FLOATING ORBS
+========================================================= */
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.14;
+  animation: orbFloat 12s ease-in-out infinite;
+}
+
+
+.orb-one {
+
+  width: 380px;
+  height: 380px;
+
+  top: -140px;
+  right: -100px;
+
+  background: #55f5c5;
+
+}
+
+
+.orb-two {
+
+  width: 300px;
+  height: 300px;
+
+  bottom: 10%;
+  left: -150px;
+
+  background: #5965ff;
+
+  animation-delay: -4s;
+
+}
+
+
+.orb-three {
+
+  width: 220px;
+  height: 220px;
+
+  top: 45%;
+  right: 10%;
+
+  background: #20c997;
+
+  animation-delay: -7s;
+
+}
+
+
+@keyframes orbFloat {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(30px, -35px, 0) scale(1.08);
+  }
+
+}
+
+
+/* =========================================================
+   FLOATING PARTICLES
+========================================================= */
+
+.floating-particle {
+
+  position: absolute;
+
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background: var(--motion-green);
+
+  box-shadow:
+    0 0 10px rgba(85, 245, 197, 0.8);
+
+  opacity: 0.45;
+
+  animation: particleFloat 8s ease-in-out infinite;
+
+}
+
+
+.particle-1 {
+  left: 12%;
+  top: 20%;
+}
+
+.particle-2 {
+  left: 27%;
+  top: 70%;
+  animation-delay: -2s;
+}
+
+.particle-3 {
+  left: 52%;
+  top: 30%;
+  animation-delay: -4s;
+}
+
+.particle-4 {
+  left: 70%;
+  top: 75%;
+  animation-delay: -1s;
+}
+
+.particle-5 {
+  left: 84%;
+  top: 35%;
+  animation-delay: -5s;
+}
+
+.particle-6 {
+  left: 92%;
+  top: 65%;
+  animation-delay: -3s;
+}
+
+
+@keyframes particleFloat {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+
+  }
+
+  50% {
+
+    transform:
+      translate3d(0, -30px, 0)
+      scale(1.8);
+
+  }
+
+}
+
+
+/* =========================================================
+   CURSOR GLOW
+========================================================= */
+
+.cursor-glow {
+
+  position: fixed;
+
+  width: 280px;
+  height: 280px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: 9999;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(85, 245, 197, 0.08),
+      transparent 70%
+    );
+
+  transform:
+    translate(-50%, -50%);
+
+  transition:
+    opacity 0.3s ease;
+
+  opacity: 0;
+
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.reveal {
+
+  opacity: 0;
+
+  transform:
+    translateY(45px)
+    scale(0.97);
+
+  transition:
+
+    opacity 0.8s cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    ),
+
+    transform 0.8s cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
+
+}
+
+
+.reveal.active {
+
+  opacity: 1;
+
+  transform:
+    translateY(0)
+    scale(1);
+
+}
+
+
+/* =========================================================
+   STAGGER
+========================================================= */
+
+.skill-card:nth-child(1) {
+  transition-delay: 0.03s;
+}
+
+.skill-card:nth-child(2) {
+  transition-delay: 0.08s;
+}
+
+.skill-card:nth-child(3) {
+  transition-delay: 0.13s;
+}
+
+.skill-card:nth-child(4) {
+  transition-delay: 0.18s;
+}
+
+.skill-card:nth-child(5) {
+  transition-delay: 0.23s;
+}
+
+.skill-card:nth-child(6) {
+  transition-delay: 0.28s;
+}
+
+.skill-card:nth-child(7) {
+  transition-delay: 0.33s;
+}
+
+.skill-card:nth-child(8) {
+  transition-delay: 0.38s;
+}
+
+.skill-card:nth-child(9) {
+  transition-delay: 0.43s;
+}
+
+.skill-card:nth-child(10) {
+  transition-delay: 0.48s;
+}
+
+.skill-card:nth-child(11) {
+  transition-delay: 0.53s;
+}
+
+.skill-card:nth-child(12) {
+  transition-delay: 0.58s;
+}
+
+
+/* =========================================================
+   SKILLS SECTION
+========================================================= */
+
+.skills-section {
+
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    110px
+    5.2vw
+    120px;
+
+  overflow: hidden;
+
+}
+
+
+.section-heading {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 28px;
+
+  margin-bottom: 65px;
+
+}
+
+
+.section-number {
+
+  color: var(--motion-green);
+
+  font-family: monospace;
+
+  font-size: 13px;
+
+  padding-top: 12px;
+
+}
+
+
+.section-label {
+
+  display: block;
+
+  color: var(--motion-green);
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 12px;
+
+}
+
+
+.section-heading h2 {
+
+  margin: 0;
+
+  font-size:
+    clamp(
+      48px,
+      5vw,
+      78px
+    );
+
+  line-height: 0.95;
+
+  letter-spacing: -4px;
+
+  font-weight: 500;
+
+}
+
+
+.section-heading h2 span {
+
+  color: var(--motion-green);
+
+}
+
+
+/* =========================================================
+   SKILL GRID
+========================================================= */
+
+.skills-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+
+  max-width: 1500px;
+
+  margin: auto;
+
+}
+
+
+/* =========================================================
+   SKILL CARD
+========================================================= */
+
+.skill-card {
+
+  position: relative;
+
+  min-height: 220px;
+
+  padding: 30px 31px;
+
+  border:
+    1px solid
+    var(--motion-border);
+
+  border-radius: 25px;
+
+  background:
+    rgba(10, 15, 25, 0.72);
+
+  backdrop-filter: blur(12px);
+
+  overflow: hidden;
+
+  transform-style: preserve-3d;
+
+  transition:
+
+    border-color 0.4s ease,
+
+    background 0.4s ease,
+
+    box-shadow 0.4s ease;
+
+}
+
+
+/* CARD LIGHT */
+
+.skill-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  left: var(--mouse-x, 50%);
+  top: var(--mouse-y, 50%);
+
+  transform:
+    translate(-50%, -50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(85,245,197,0.13),
+      transparent 70%
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.4s ease;
+
+  pointer-events: none;
+
+}
+
+
+.skill-card:hover::before {
+  opacity: 1;
+}
+
+
+.skill-card:hover {
+
+  border-color:
+    rgba(85,245,197,0.5);
+
+  background:
+    rgba(12,20,30,0.88);
+
+  box-shadow:
+    0 25px 60px
+    rgba(0,0,0,0.25);
+
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.skill-top {
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  margin-bottom:
+    42px;
+
+}
+
+
+.skill-icon {
+
+  color:
+    var(--motion-green);
+
+  font-family:
+    monospace;
+
+  font-size:
+    13px;
+
+  font-weight:
+    700;
+
+}
+
+
+.skill-level {
+
+  color:
+    #788397;
+
+  font-family:
+    monospace;
+
+  font-size:
+    10px;
+
+  letter-spacing:
+    3px;
+
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.skill-card h3 {
+
+  margin:
+    0 0 10px;
+
+  color:
+    #f1f4fb;
+
+  font-size:
+    22px;
+
+  font-weight:
+    600;
+
+}
+
+
+.skill-card p {
+
+  margin:
+    0;
+
+  color:
+    #8c96a9;
+
+  font-size:
+    14px;
+
+  line-height:
+    1.6;
+
+}
+
+
+/* =========================================================
+   SKILL BAR
+========================================================= */
+
+.skill-bar {
+
+  position:
+    absolute;
+
+  left:
+    31px;
+
+  right:
+    31px;
+
+  bottom:
+    32px;
+
+  height:
+    3px;
+
+  background:
+    rgba(150,165,190,0.12);
+
+  border-radius:
+    10px;
+
+  overflow:
+    hidden;
+
+}
+
+
+.skill-bar span {
+
+  display:
+    block;
+
+  width:
+    0;
+
+  height:
+    100%;
+
+  background:
+    var(--motion-green);
+
+  border-radius:
+    inherit;
+
+  box-shadow:
+    0 0 12px
+    rgba(85,245,197,0.35);
+
+  transition:
+    width 1.5s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
+
+}
+
+
+.skill-card.active
+.skill-bar span {
+
+  width:
+    var(--progress);
+
+}
+
+
+/* =========================================================
+   FEATURED AI
+========================================================= */
+
+.featured-skill {
+
+  border-color:
+    rgba(85,245,197,0.3);
+
+}
+
+
+.featured-skill::after {
+
+  content:
+    "AI";
+
+  position:
+    absolute;
+
+  right:
+    22px;
+
+  bottom:
+    18px;
+
+  font-family:
+    monospace;
+
+  font-size:
+    9px;
+
+  letter-spacing:
+    3px;
+
+  color:
+    rgba(85,245,197,0.25);
+
+}
+
+
+/* =========================================================
+   BUTTON MOTION
+========================================================= */
+
+.magnetic-button {
+
+  position:
+    relative;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  transition:
+    transform 0.25s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
+
+}
+
+
+.magnetic-button::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  inset:
+    -4px;
+
+  border:
+    1px solid
+    rgba(85,245,197,0.3);
+
+  border-radius:
+    inherit;
+
+  opacity:
+    0;
+
+  transform:
+    scale(0.9);
+
+  transition:
+    all 0.3s ease;
+
+}
+
+
+.magnetic-button:hover::after {
+
+  opacity:
+    1;
+
+  transform:
+    scale(1.05);
+
+}
+
+
+/* =========================================================
+   LINK HOVER
+========================================================= */
+
+a {
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+
+}
+
+
+a:hover {
+
+  color:
+    var(--motion-green);
+
+}
+
+
+/* =========================================================
+   IMAGE MOTION
+========================================================= */
+
+.motion-image {
+
+  transition:
+    transform 0.8s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    ),
+    filter 0.5s ease;
+
+}
+
+
+.motion-image:hover {
+
+  transform:
+    scale(1.04);
+
+  filter:
+    brightness(1.08);
+
+}
+
+
+/* =========================================================
+   HERO ENTRANCE
+========================================================= */
+
+.hero-motion {
+
+  opacity:
+    0;
+
+  transform:
+    translateY(30px);
+
+  animation:
+    heroEnter
+    1s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    )
+    forwards;
+
+}
+
+
+.hero-motion:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.hero-motion:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.hero-motion:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.hero-motion:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+
+@keyframes heroEnter {
+
+  to {
+
+    opacity:
+      1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .skills-grid {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .skills-section {
+
+    padding:
+      80px 20px 90px;
+
+  }
+
+  .skills-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+  .section-heading {
+
+    gap:
+      15px;
+
+  }
+
+  .section-heading h2 {
+
+    font-size:
+      52px;
+
+    letter-spacing:
+      -3px;
+
+  }
+
+  .skill-card {
+
+    min-height:
+      210px;
+
+    padding:
+      25px;
+
+  }
+
+  .cursor-glow {
+
+    display:
+      none;
+
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior:
+      auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+
+  }
+
+  .reveal {
+
+    opacity:
+      1;
+
+    transform:
+      none;
+
+  }
+
+}
+.nav-active {
+  color: #55f5c5 !important;
+  text-shadow:
+    0 0 15px
+    rgba(85,245,197,0.35);
+}
+
+
+.nav-active::after {
+  width: 100% !important;
+}
+.back-to-top {
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+
+}
+
+
+.back-to-top:hover {
+
+  transform:
+    translateY(-5px);
+
+}
+
+
+.back-to-top:active {
+
+  transform:
+    translateY(-2px)
+    scale(0.95);
+
+}
+/* =====================================================
+   GALAXY BACKGROUND SYSTEM
+===================================================== */
+
+#galaxyCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -20;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(0, 255, 157, 0.055),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(0, 183, 255, 0.04),
+      transparent 25%
+    ),
+    #020604;
+}
+
+/*
+   Make sure your actual portfolio
+   stays above the galaxy.
+*/
+
+body {
+  position: relative;
+  background: #020604;
+}
+
+.motion-background {
+  z-index: -10;
+}
+
+.background-grid {
+  z-index: -9;
+}
+
+.glow {
+  z-index: -8;
+}
+
+
+/* =====================================================
+   GALAXY HUD
+===================================================== */
+
+.galaxy-ui {
+  position: fixed;
+  top: 105px;
+  right: 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.galaxy-status,
+.galaxy-time {
+  padding: 9px 13px;
+
+  border: 1px solid rgba(0, 255, 157, 0.16);
+
+  border-radius: 999px;
+
+  background: rgba(2, 12, 8, 0.45);
+
+  backdrop-filter: blur(12px);
+
+  color: rgba(210, 255, 235, 0.65);
+}
+
+.galaxy-live-dot {
+  display: inline-block;
+
+  width: 6px;
+  height: 6px;
+
+  margin-right: 7px;
+
+  border-radius: 50%;
+
+  background: #00ff9d;
+
+  box-shadow:
+    0 0 8px #00ff9d,
+    0 0 18px rgba(0, 255, 157, 0.7);
+
+  animation: galaxyPulse 1.5s infinite;
+}
+
+@keyframes galaxyPulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.35;
+    transform: scale(0.75);
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .galaxy-ui {
+    top: 85px;
+    right: 15px;
+
+    gap: 5px;
+
+    font-size: 8px;
+  }
+
+  .galaxy-status,
+  .galaxy-time {
+    padding: 7px 9px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .galaxy-time {
+    display: none;
+  }
+
+}
+/* =========================================
+   PROFESSIONAL SKILLS SYSTEM
+========================================= */
+
+.skills-section {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* GRID */
+
+.skills-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+/* CARD */
+
+.skill-card {
+  position: relative;
+
+  min-height: 265px;
+
+  padding: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(7, 16, 25, 0.97),
+      rgba(4, 10, 17, 0.94)
+    );
+
+  border: 1px solid rgba(125, 160, 180, 0.20);
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    transform 0.45s cubic-bezier(.2,.8,.2,1),
+    border-color 0.45s ease,
+    box-shadow 0.45s ease,
+    background 0.45s ease;
+}
+
+
+/* futuristic corner glow */
+
+.skill-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -100px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 255, 170, 0.12);
+
+  filter: blur(40px);
+
+  transition: 0.5s ease;
+
+  pointer-events: none;
+}
+
+
+/* bottom light */
+
+.skill-card::after {
+  content: "";
+
+  position: absolute;
+
+  left: 10%;
+  right: 10%;
+  bottom: -40px;
+
+  height: 70px;
+
+  background: rgba(0, 255, 170, 0.08);
+
+  filter: blur(30px);
+
+  opacity: 0;
+
+  transition: 0.5s ease;
+
+  pointer-events: none;
+}
+
+
+/* HOVER */
+
+.skill-card:hover {
+  transform:
+    translateY(-8px)
+    scale(1.015);
+
+  border-color: rgba(0, 255, 170, 0.48);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.45),
+    0 0 35px rgba(0, 255, 170, 0.08);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(9, 24, 32, 0.98),
+      rgba(4, 12, 19, 0.98)
+    );
+}
+
+
+.skill-card:hover::before {
+  transform: scale(1.5);
+
+  background: rgba(0, 255, 170, 0.20);
+}
+
+
+.skill-card:hover::after {
+  opacity: 1;
+}
+
+
+/* TOP */
+
+.skill-card-top {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+}
+
+
+/* LOGO */
+
+.skill-logo {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px;
+
+  border-radius: 16px;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+.skill-logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  transition: transform 0.4s ease;
+}
+
+
+.skill-card:hover .skill-logo {
+  transform: translateY(-3px);
+
+  border-color:
+    rgba(0, 255, 170, 0.35);
+
+  box-shadow:
+    0 0 25px rgba(0, 255, 170, 0.12);
+}
+
+
+.skill-card:hover .skill-logo img {
+  transform: scale(1.12) rotate(3deg);
+}
+
+
+/* TEXT LOGOS */
+
+.text-logo {
+  padding: 0;
+
+  color: #00ffb0;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+
+.ai-logo {
+  font-size: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 255, 170, 0.14),
+      rgba(0, 180, 255, 0.10)
+    );
+}
+
+
+.bot-logo {
+  font-size: 12px;
+}
+
+
+.payment-logo {
+  font-size: 25px;
+}
+
+
+.seo-logo {
+  font-size: 12px;
+}
+
+
+.analytics-logo {
+  font-size: 15px;
+}
+
+
+.video-logo {
+  font-size: 20px;
+}
+
+
+/* LEVEL */
+
+.skill-level {
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  font-weight: 600;
+
+  border: 1px solid rgba(255,255,255,0.10);
+
+  background: rgba(255,255,255,0.025);
+}
+
+
+.skill-level.core {
+  color: #00ffb0;
+}
+
+
+.skill-level.learning {
+  color: #ffd166;
+}
+
+
+.skill-level.building {
+  color: #55c7ff;
+}
+
+
+.skill-level.creative {
+  color: #c99cff;
+}
+
+
+.skill-level.growing {
+  color: #00eaff;
+}
+
+
+/* INFO */
+
+.skill-info {
+  position: relative;
+
+  z-index: 2;
+
+  flex: 1;
+}
+
+
+.skill-info h3 {
+  margin: 0 0 12px;
+
+  color: #f4f7fa;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 21px;
+
+  font-weight: 600;
+}
+
+
+.skill-info p {
+  margin: 0;
+
+  color: rgba(190, 205, 215, 0.72);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+/* PROGRESS */
+
+.skill-progress {
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+
+.skill-progress-bar {
+  position: relative;
+
+  height: 4px;
+
+  flex: 1;
+
+  background:
+    rgba(255,255,255,0.07);
+
+  border-radius: 999px;
+
+  overflow: hidden;
+}
+
+
+.skill-progress-bar span {
+  display: block;
+
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      #00dca0,
+      #00ffb0,
+      #58ffc9
+    );
+
+  box-shadow:
+    0 0 12px rgba(0,255,176,0.45);
+
+  transform-origin: left;
+
+  animation:
+    skillBarIn 1.4s cubic-bezier(.2,.8,.2,1) both;
+}
+
+
+.skill-percent {
+  min-width: 34px;
+
+  text-align: right;
+
+  color: #00ffb0;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+@keyframes skillBarIn {
+
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+
+}
+
+
+/* FEATURED AI CARD */
+
+.featured-skill {
+  border-color:
+    rgba(0, 255, 176, 0.25);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(7, 27, 27, 0.98),
+      rgba(4, 12, 19, 0.96)
+    );
+}
+
+
+.featured-skill::before {
+  background:
+    rgba(0, 255, 176, 0.18);
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+  .skills-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+
+    margin-top: 40px;
+
+    gap: 14px;
+  }
+
+
+  .skill-card {
+    min-height: 250px;
+
+    padding: 24px;
+
+    border-radius: 20px;
+  }
+
+
+  .skill-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+
+  .skill-info h3 {
+    font-size: 19px;
+  }
+
+
+  .skill-info p {
+    font-size: 12px;
+  }
+
+}

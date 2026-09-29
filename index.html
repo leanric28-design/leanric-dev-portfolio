@@ -67,6 +67,45 @@
 </head>
 
 <body>
+  
+  <!-- =========================================
+     GALAXY / SPACE BACKGROUND
+========================================= -->
+
+<canvas id="galaxyCanvas" aria-hidden="true"></canvas>
+
+<div class="galaxy-ui" aria-hidden="true">
+  <div class="galaxy-status">
+    <span class="galaxy-live-dot"></span>
+    LIVE ORBITAL SYSTEM
+  </div>
+
+  <div class="galaxy-time" id="galaxyTime">
+    00:00:00 PHT
+  </div>
+</div> 
+
+<!-- =========================================
+     PREMIUM MOTION BACKGROUND
+========================================= -->
+
+<div class="motion-background" aria-hidden="true">
+  <div class="grid-overlay"></div>
+
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+  <div class="orb orb-three"></div>
+
+  <div class="floating-particle particle-1"></div>
+  <div class="floating-particle particle-2"></div>
+  <div class="floating-particle particle-3"></div>
+  <div class="floating-particle particle-4"></div>
+  <div class="floating-particle particle-5"></div>
+  <div class="floating-particle particle-6"></div>
+</div>
+
+<!-- Cursor glow -->
+<div class="cursor-glow" aria-hidden="true"></div>
 
   <!-- Background -->
 
@@ -354,467 +393,715 @@
 
 </section>
 
-<!-- Skills -->
-<section class="section" id="skills">
+<!-- =========================
+     SKILLS
+========================= -->
+<section class="section skills-section" id="skills">
 
   <div class="section-heading">
     <span class="section-number">02</span>
+
     <div>
       <p class="section-label">WHAT I WORK WITH</p>
       <h2>My <span>Skills</span></h2>
     </div>
   </div>
 
-  <div class="skills-grid">
-
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">&lt;/&gt;</span>
-        <span class="skill-level">CORE</span>
-      </div>
-      <h3>HTML</h3>
-      <p>Semantic and structured web pages.</p>
-      <div class="skill-line"><span style="width: 90%"></span></div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">#</span>
-        <span class="skill-level">CORE</span>
-      </div>
-      <h3>CSS</h3>
-      <p>Responsive layouts and modern UI design.</p>
-      <div class="skill-line"><span style="width: 85%"></span></div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">JS</span>
-        <span class="skill-level">LEARNING</span>
-      </div>
-      <h3>JavaScript</h3>
-      <p>Interactive interfaces and web functionality.</p>
-      <div class="skill-line"><span style="width: 70%"></span></div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">UI</span>
-        <span class="skill-level">CREATIVE</span>
-      </div>
-      <h3>UI / UX</h3>
-      <p>Clean interfaces focused on user experience.</p>
-      <div class="skill-line"><span style="width: 80%"></span></div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">VD</span>
-        <span class="skill-level">CREATIVE</span>
-      </div>
-      <h3>Video Editing</h3>
-      <p>Professional short-form and long-form editing.</p>
-      <div class="skill-line"><span style="width: 90%"></span></div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">AI</span>
-        <span class="skill-level">GROWING</span>
-      </div>
-      <h3>AI & Automation</h3>
-      <p>Exploring AI-powered digital workflows.</p>
-      <div class="skill-line"><span style="width: 65%"></span></div>
-    </div>
 
   <div class="skills-grid">
 
-    <!-- FRONTEND -->
 
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">&lt;/&gt;</span>
-        <span class="skill-level">CORE</span>
+    <!-- HTML -->
+    <article class="skill-card">
+
+      <div class="skill-card-top">
+        <div class="skill-logo">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+            alt="HTML5"
+          >
+        </div>
+
+        <span class="skill-level core">
+          CORE
+        </span>
       </div>
 
-      <h3>HTML</h3>
+      <div class="skill-info">
+        <h3>HTML5</h3>
 
-      <p>
-        Semantic and structured web pages built for modern websites.
-      </p>
-
-      <div class="skill-bar">
-        <span style="width: 90%;"></span>
-      </div>
-    </div>
-
-
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">#</span>
-        <span class="skill-level">CORE</span>
+        <p>
+          Semantic and structured web pages built for modern websites.
+        </p>
       </div>
 
-      <h3>CSS</h3>
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 90%;"></span>
+        </div>
 
-      <p>
-        Responsive layouts, animations and modern interface design.
-      </p>
-
-      <div class="skill-bar">
-        <span style="width: 88%;"></span>
-      </div>
-    </div>
-
-
-    <div class="skill-card learning-card">
-      <div class="skill-top">
-        <span class="skill-icon">JS</span>
-        <span class="skill-level">LEARNING</span>
+        <span class="skill-percent">90%</span>
       </div>
 
-      <h3>JavaScript</h3>
-
-      <p>
-        Interactive interfaces and dynamic web functionality.
-      </p>
-
-      <div class="skill-bar">
-        <span style="width: 68%;"></span>
-      </div>
-    </div>
+    </article>
 
 
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">⚛</span>
-        <span class="skill-level">BUILDING</span>
-      </div>
 
-      <h3>React.js</h3>
+    <!-- CSS -->
+    <article class="skill-card">
 
-      <p>
-        Component-based interfaces for modern web applications.
-      </p>
+      <div class="skill-card-top">
 
-      <div class="skill-bar">
-        <span style="width: 60%;"></span>
-      </div>
-    </div>
+        <div class="skill-logo">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+            alt="CSS3"
+          >
+        </div>
 
+        <span class="skill-level core">
+          CORE
+        </span>
 
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">N</span>
-        <span class="skill-level">BUILDING</span>
       </div>
 
-      <h3>Next.js</h3>
+      <div class="skill-info">
+        <h3>CSS3</h3>
 
-      <p>
-        Modern full-stack websites and production-ready web apps.
-      </p>
-
-      <div class="skill-bar">
-        <span style="width: 58%;"></span>
-      </div>
-    </div>
-
-
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">TW</span>
-        <span class="skill-level">BUILDING</span>
+        <p>
+          Responsive layouts, animations and modern interface design.
+        </p>
       </div>
 
-      <h3>Tailwind CSS</h3>
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 88%;"></span>
+        </div>
 
-      <p>
-        Fast and scalable responsive interface development.
-      </p>
-
-      <div class="skill-bar">
-        <span style="width: 65%;"></span>
-      </div>
-    </div>
-
-
-    <!-- BACKEND -->
-
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">JS</span>
-        <span class="skill-level">BUILDING</span>
+        <span class="skill-percent">88%</span>
       </div>
 
-      <h3>Node.js</h3>
-
-      <p>
-        Server-side applications and backend functionality.
-      </p>
-
-      <div class="skill-bar">
-        <span style="width: 50%;"></span>
-      </div>
-    </div>
+    </article>
 
 
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">API</span>
-        <span class="skill-level">BUILDING</span>
-      </div>
 
-      <h3>REST APIs</h3>
+    <!-- JAVASCRIPT -->
+    <article class="skill-card">
 
-      <p>
-        Connecting websites with external services and applications.
-      </p>
+      <div class="skill-card-top">
 
-      <div class="skill-bar">
-        <span style="width: 55%;"></span>
-      </div>
-    </div>
+        <div class="skill-logo">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            alt="JavaScript"
+          >
+        </div>
 
+        <span class="skill-level learning">
+          LEARNING
+        </span>
 
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">DB</span>
-        <span class="skill-level">LEARNING</span>
       </div>
 
-      <h3>Database / SQL</h3>
+      <div class="skill-info">
+        <h3>JavaScript</h3>
 
-      <p>
-        Structured data, customer records and application storage.
-      </p>
-
-      <div class="skill-bar">
-        <span style="width: 45%;"></span>
-      </div>
-    </div>
-
-
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">SB</span>
-        <span class="skill-level">BUILDING</span>
+        <p>
+          Interactive interfaces and dynamic web functionality.
+        </p>
       </div>
 
-      <h3>Supabase</h3>
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 70%;"></span>
+        </div>
 
-      <p>
-        Database, authentication, storage and backend services.
-      </p>
-
-      <div class="skill-bar">
-        <span style="width: 45%;"></span>
-      </div>
-    </div>
-
-
-    <!-- BUSINESS SYSTEMS -->
-
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">₱</span>
-        <span class="skill-level">BUILDING</span>
+        <span class="skill-percent">70%</span>
       </div>
 
-      <h3>Payment Integration</h3>
-
-      <p>
-        Online payment workflows for digital and business websites.
-      </p>
-
-      <div class="skill-bar">
-        <span style="width: 40%;"></span>
-      </div>
-    </div>
+    </article>
 
 
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">CRM</span>
-        <span class="skill-level">LEARNING</span>
-      </div>
 
-      <h3>CRM Integration</h3>
+    <!-- REACT -->
+    <article class="skill-card">
 
-      <p>
-        Connecting websites with customer and lead management systems.
-      </p>
+      <div class="skill-card-top">
 
-      <div class="skill-bar">
-        <span style="width: 40%;"></span>
-      </div>
-    </div>
+        <div class="skill-logo">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+            alt="React.js"
+          >
+        </div>
 
+        <span class="skill-level building">
+          BUILDING
+        </span>
 
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">SEO</span>
-        <span class="skill-level">BUILDING</span>
       </div>
 
-      <h3>SEO</h3>
+      <div class="skill-info">
+        <h3>React.js</h3>
 
-      <p>
-        Search-friendly website structure and on-page optimization.
-      </p>
-
-      <div class="skill-bar">
-        <span style="width: 55%;"></span>
-      </div>
-    </div>
-
-
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">GA</span>
-        <span class="skill-level">LEARNING</span>
+        <p>
+          Component-based interfaces for modern web applications.
+        </p>
       </div>
 
-      <h3>Analytics</h3>
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 60%;"></span>
+        </div>
 
-      <p>
-        Understanding traffic, user behavior and website performance.
-      </p>
-
-      <div class="skill-bar">
-        <span style="width: 40%;"></span>
-      </div>
-    </div>
-
-
-    <!-- AI & AUTOMATION -->
-
-    <div class="skill-card featured-skill">
-      <div class="skill-top">
-        <span class="skill-icon">AI</span>
-        <span class="skill-level">GROWING</span>
+        <span class="skill-percent">60%</span>
       </div>
 
-      <h3>AI & Automation</h3>
-
-      <p>
-        AI-powered workflows, business automation and smart digital tools.
-      </p>
-
-      <div class="skill-bar">
-        <span style="width: 55%;"></span>
-      </div>
-    </div>
+    </article>
 
 
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">N8N</span>
-        <span class="skill-level">LEARNING</span>
-      </div>
 
-      <h3>Workflow Automation</h3>
+    <!-- NEXT JS -->
+    <article class="skill-card">
 
-      <p>
-        Automated workflows connecting websites, apps and business tools.
-      </p>
+      <div class="skill-card-top">
 
-      <div class="skill-bar">
-        <span style="width: 40%;"></span>
-      </div>
-    </div>
+        <div class="skill-logo">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+            alt="Next.js"
+          >
+        </div>
 
+        <span class="skill-level building">
+          BUILDING
+        </span>
 
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">BOT</span>
-        <span class="skill-level">GROWING</span>
       </div>
 
-      <h3>AI Chatbots</h3>
+      <div class="skill-info">
+        <h3>Next.js</h3>
 
-      <p>
-        Intelligent customer support and lead qualification systems.
-      </p>
-
-      <div class="skill-bar">
-        <span style="width: 45%;"></span>
-      </div>
-    </div>
-
-
-    <!-- CREATIVE -->
-
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">UI</span>
-        <span class="skill-level">CREATIVE</span>
+        <p>
+          Modern full-stack websites and production-ready web apps.
+        </p>
       </div>
 
-      <h3>UI / UX</h3>
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 58%;"></span>
+        </div>
 
-      <p>
-        Clean interfaces focused on usability and user experience.
-      </p>
-
-      <div class="skill-bar">
-        <span style="width: 80%;"></span>
-      </div>
-    </div>
-
-
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">VD</span>
-        <span class="skill-level">CREATIVE</span>
+        <span class="skill-percent">58%</span>
       </div>
 
-      <h3>Video Editing</h3>
-
-      <p>
-        Professional short-form and long-form video editing.
-      </p>
-
-      <div class="skill-bar">
-        <span style="width: 78%;"></span>
-      </div>
-    </div>
+    </article>
 
 
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">GH</span>
-        <span class="skill-level">CORE</span>
-      </div>
 
-      <h3>Git & GitHub</h3>
+    <!-- TAILWIND -->
+    <article class="skill-card">
 
-      <p>
-        Version control and professional website development workflow.
-      </p>
+      <div class="skill-card-top">
 
-      <div class="skill-bar">
-        <span style="width: 60%;"></span>
-      </div>
-    </div>
+        <div class="skill-logo">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+            alt="Tailwind CSS"
+          >
+        </div>
 
+        <span class="skill-level building">
+          BUILDING
+        </span>
 
-    <div class="skill-card">
-      <div class="skill-top">
-        <span class="skill-icon">DEP</span>
-        <span class="skill-level">BUILDING</span>
       </div>
 
-      <h3>Deployment</h3>
+      <div class="skill-info">
+        <h3>Tailwind CSS</h3>
 
-      <p>
-        Publishing websites and applications to production environments.
-      </p>
-
-      <div class="skill-bar">
-        <span style="width: 60%;"></span>
+        <p>
+          Fast and scalable responsive interface development.
+        </p>
       </div>
-    </div>
+
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 65%;"></span>
+        </div>
+
+        <span class="skill-percent">65%</span>
+      </div>
+
+    </article>
+
+
+
+    <!-- NODE -->
+    <article class="skill-card">
+
+      <div class="skill-card-top">
+
+        <div class="skill-logo">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+            alt="Node.js"
+          >
+        </div>
+
+        <span class="skill-level building">
+          BUILDING
+        </span>
+
+      </div>
+
+      <div class="skill-info">
+        <h3>Node.js</h3>
+
+        <p>
+          Server-side applications and backend functionality.
+        </p>
+      </div>
+
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 50%;"></span>
+        </div>
+
+        <span class="skill-percent">50%</span>
+      </div>
+
+    </article>
+
+
+
+    <!-- DATABASE -->
+    <article class="skill-card">
+
+      <div class="skill-card-top">
+
+        <div class="skill-logo">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+            alt="SQL Database"
+          >
+        </div>
+
+        <span class="skill-level learning">
+          LEARNING
+        </span>
+
+      </div>
+
+      <div class="skill-info">
+        <h3>Database / SQL</h3>
+
+        <p>
+          Structured data, customer records and application storage.
+        </p>
+      </div>
+
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 45%;"></span>
+        </div>
+
+        <span class="skill-percent">45%</span>
+      </div>
+
+    </article>
+
+
+
+    <!-- SUPABASE -->
+    <article class="skill-card">
+
+      <div class="skill-card-top">
+
+        <div class="skill-logo">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg"
+            alt="Supabase"
+          >
+        </div>
+
+        <span class="skill-level building">
+          BUILDING
+        </span>
+
+      </div>
+
+      <div class="skill-info">
+        <h3>Supabase</h3>
+
+        <p>
+          Database, authentication, storage and backend services.
+        </p>
+      </div>
+
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 45%;"></span>
+        </div>
+
+        <span class="skill-percent">45%</span>
+      </div>
+
+    </article>
+
+
+
+    <!-- GIT -->
+    <article class="skill-card">
+
+      <div class="skill-card-top">
+
+        <div class="skill-logo">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+            alt="Git"
+          >
+        </div>
+
+        <span class="skill-level core">
+          CORE
+        </span>
+
+      </div>
+
+      <div class="skill-info">
+        <h3>Git & GitHub</h3>
+
+        <p>
+          Version control and professional development workflow.
+        </p>
+      </div>
+
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 65%;"></span>
+        </div>
+
+        <span class="skill-percent">65%</span>
+      </div>
+
+    </article>
+
+
+
+    <!-- UI UX -->
+    <article class="skill-card">
+
+      <div class="skill-card-top">
+
+        <div class="skill-logo text-logo">
+          UI
+        </div>
+
+        <span class="skill-level creative">
+          CREATIVE
+        </span>
+
+      </div>
+
+      <div class="skill-info">
+        <h3>UI / UX</h3>
+
+        <p>
+          Clean interfaces focused on usability and user experience.
+        </p>
+      </div>
+
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 80%;"></span>
+        </div>
+
+        <span class="skill-percent">80%</span>
+      </div>
+
+    </article>
+
+
+
+    <!-- AI -->
+    <article class="skill-card featured-skill">
+
+      <div class="skill-card-top">
+
+        <div class="skill-logo text-logo ai-logo">
+          AI
+        </div>
+
+        <span class="skill-level growing">
+          GROWING
+        </span>
+
+      </div>
+
+      <div class="skill-info">
+        <h3>AI & Automation</h3>
+
+        <p>
+          AI-powered workflows, business automation and smart digital tools.
+        </p>
+      </div>
+
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 55%;"></span>
+        </div>
+
+        <span class="skill-percent">55%</span>
+      </div>
+
+    </article>
+
+
+
+    <!-- N8N -->
+    <article class="skill-card">
+
+      <div class="skill-card-top">
+
+        <div class="skill-logo text-logo">
+          n8n
+        </div>
+
+        <span class="skill-level learning">
+          LEARNING
+        </span>
+
+      </div>
+
+      <div class="skill-info">
+        <h3>Workflow Automation</h3>
+
+        <p>
+          Automated workflows connecting websites, apps and business tools.
+        </p>
+      </div>
+
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 40%;"></span>
+        </div>
+
+        <span class="skill-percent">40%</span>
+      </div>
+
+    </article>
+
+
+
+    <!-- CHATBOT -->
+    <article class="skill-card">
+
+      <div class="skill-card-top">
+
+        <div class="skill-logo text-logo bot-logo">
+          BOT
+        </div>
+
+        <span class="skill-level growing">
+          GROWING
+        </span>
+
+      </div>
+
+      <div class="skill-info">
+        <h3>AI Chatbots</h3>
+
+        <p>
+          Intelligent customer support and lead qualification systems.
+        </p>
+      </div>
+
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 45%;"></span>
+        </div>
+
+        <span class="skill-percent">45%</span>
+      </div>
+
+    </article>
+
+
+
+    <!-- PAYMENT -->
+    <article class="skill-card">
+
+      <div class="skill-card-top">
+
+        <div class="skill-logo text-logo payment-logo">
+          ₱
+        </div>
+
+        <span class="skill-level building">
+          BUILDING
+        </span>
+
+      </div>
+
+      <div class="skill-info">
+        <h3>Payment Integration</h3>
+
+        <p>
+          Online payment workflows for digital and business websites.
+        </p>
+      </div>
+
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 40%;"></span>
+        </div>
+
+        <span class="skill-percent">40%</span>
+      </div>
+
+    </article>
+
+
+
+    <!-- SEO -->
+    <article class="skill-card">
+
+      <div class="skill-card-top">
+
+        <div class="skill-logo text-logo seo-logo">
+          SEO
+        </div>
+
+        <span class="skill-level building">
+          BUILDING
+        </span>
+
+      </div>
+
+      <div class="skill-info">
+        <h3>SEO</h3>
+
+        <p>
+          Search-friendly website structure and on-page optimization.
+        </p>
+      </div>
+
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 55%;"></span>
+        </div>
+
+        <span class="skill-percent">55%</span>
+      </div>
+
+    </article>
+
+
+
+    <!-- ANALYTICS -->
+    <article class="skill-card">
+
+      <div class="skill-card-top">
+
+        <div class="skill-logo text-logo analytics-logo">
+          GA
+        </div>
+
+        <span class="skill-level learning">
+          LEARNING
+        </span>
+
+      </div>
+
+      <div class="skill-info">
+        <h3>Analytics</h3>
+
+        <p>
+          Understanding traffic, user behavior and website performance.
+        </p>
+      </div>
+
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 40%;"></span>
+        </div>
+
+        <span class="skill-percent">40%</span>
+      </div>
+
+    </article>
+
+
+
+    <!-- VIDEO EDITING -->
+    <article class="skill-card">
+
+      <div class="skill-card-top">
+
+        <div class="skill-logo text-logo video-logo">
+          ▶
+        </div>
+
+        <span class="skill-level creative">
+          CREATIVE
+        </span>
+
+      </div>
+
+      <div class="skill-info">
+        <h3>Video Editing</h3>
+
+        <p>
+          Professional short-form and long-form video editing.
+        </p>
+      </div>
+
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 78%;"></span>
+        </div>
+
+        <span class="skill-percent">78%</span>
+      </div>
+
+    </article>
+
+
+
+    <!-- DEPLOYMENT -->
+    <article class="skill-card">
+
+      <div class="skill-card-top">
+
+        <div class="skill-logo text-logo">
+          DEP
+        </div>
+
+        <span class="skill-level building">
+          BUILDING
+        </span>
+
+      </div>
+
+      <div class="skill-info">
+        <h3>Deployment</h3>
+
+        <p>
+          Publishing websites and applications to production environments.
+        </p>
+      </div>
+
+      <div class="skill-progress">
+        <div class="skill-progress-bar">
+          <span style="width: 60%;"></span>
+        </div>
+
+        <span class="skill-percent">60%</span>
+      </div>
+
+    </article>
+
 
   </div>
 
@@ -1002,61 +1289,7 @@
 </section>
 
 <!-- Services -->
-<section class="section" id="services">
 
-  <div class="section-heading">
-    <span class="section-number">04</span>
-    <div>
-      <p class="section-label">WHAT I CAN DO</p>
-      <h2>My <span>Services</span></h2>
-    </div>
-  </div>
-
-  <div class="services-grid">
-
-    <div class="service-card">
-      <span class="service-number">01</span>
-      <span class="service-icon">⌘</span>
-      <h3>Web Development</h3>
-      <p>
-        Responsive websites and landing pages designed for modern
-        businesses and personal brands.
-      </p>
-    </div>
-
-    <div class="service-card">
-      <span class="service-number">02</span>
-      <span class="service-icon">◫</span>
-      <h3>UI Implementation</h3>
-      <p>
-        Converting designs and ideas into clean, responsive
-        web interfaces.
-      </p>
-    </div>
-
-    <div class="service-card">
-      <span class="service-number">03</span>
-      <span class="service-icon">▶</span>
-      <h3>Video Editing</h3>
-      <p>
-        Short-form content, social media videos, documentaries,
-        events and promotional content.
-      </p>
-    </div>
-
-    <div class="service-card">
-      <span class="service-number">04</span>
-      <span class="service-icon">⚙</span>
-      <h3>Digital Solutions</h3>
-      <p>
-        Practical digital workflows combining websites, automation
-        and creative production.
-      </p>
-    </div>
-
-  </div>
-
-</section>
 
 <!-- Experience -->
 <section class="section experience-section">
@@ -1200,7 +1433,7 @@
 
 <div class="footer-bottom">
   <span>© 2026 Leanric Dasigan. All rights reserved.</span>
-  <span>Built with HTML • CSS • JavaScript</span>
+  <span>Built with HTML • CSS • JavaScript •  </span>
 </div>
 ```
 
